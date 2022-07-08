@@ -1,0 +1,55 @@
+@import "./colors.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 12px 18px;
+}
+
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: sans-serif;
+}
+
+a {
+  color: $primary;
+  padding: 6px 2px;
+  border-radius: 12px;
+  text-decoration: none;
+  &:hover {
+    background-color: $transparent;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  strong {
+    color: $primary;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+pre {
+  border-radius: 12px;
+  background-color: $transparent;
+  padding: 12px;
+  margin: 12px 12px 12px 20px;
+}
+
+blockquote {
+  padding: 12px;
+  background-color: $primary;
+  margin: 12px 12px 12px 20px;
+  border-left: 12px solid lighten($color: $primary, $amount: 10);
+}

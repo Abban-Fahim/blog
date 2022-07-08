@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
+
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  h1 {
+    font: 700 34px "Arima", cursive;
+    flex: 1;
+  }
+  li {
+    display: inline;
+    padding: 0 10px;
+  }
+}
