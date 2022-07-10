@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-jsx","path":"/","result":{"data":{"allFile":{"edges":[{"node":{"relativePath":"about.mdx"}},{"node":{"relativePath":"first-post.mdx"}},{"node":{"relativePath":"tech/duck.mdx"}}]}},"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-index-jsx","path":"/","result":{"data":{"allFile":{"edges":[{"node":{"relativePath":"first-post.mdx"}},{"node":{"relativePath":"about.mdx"}},{"node":{"relativePath":"tech/duck.mdx"}}]}},"pageContext":{}},"staticQueryHashes":[]}
