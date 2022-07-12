@@ -21,7 +21,7 @@ a {
   border-radius: 12px;
   text-decoration: none;
   &:hover {
-    background-color: $transparent;
+    filter: opacity(0.7);
   }
 }
 
@@ -31,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Righteous, sans-serif;
   font-weight: normal;
   strong {
     color: $primary;

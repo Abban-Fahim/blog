@@ -1,5 +1,7 @@
 module.exports = {
+  pathPrefix: "/blog",
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -8,6 +10,12 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ],
 };
