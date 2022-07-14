@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmdx_framework=self.webpackChunkmdx_framework||[]).push([[230],{610:function(e,r,t){t.r(r);var n=t(7294);r.default=function(){return n.createElement("main",null,n.createElement("section",null,"This is my web framework. For static websites."))}}}]);
-//# sourceMappingURL=component---src-pages-index-jsx-c3e909d66187dd416e0b.js.map
