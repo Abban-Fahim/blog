@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Flipbox = ({ frontContent, flipContent, button }) => {
-  const [flipped, setFlipped] = useState(true);
+  const [flipped, setFlipped] = useState(false);
 
   return (
     <div

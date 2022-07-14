@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Sun from "./../sun.png";
 import Moon from "./../moon.png";
 
-const ThemeBtn = ({ theme, setTheme, width }) => {
+const ThemeBtn = ({ theme, setTheme, width, ...props }) => {
   useEffect(() => {
     let cookie = window.localStorage.getItem("theme");
     if (!cookie) {
@@ -15,6 +15,7 @@ const ThemeBtn = ({ theme, setTheme, width }) => {
 
   return (
     <button
+      {...props}
       onClick={() => {
         let newTheme;
         theme === "dark" ? (newTheme = "light") : (newTheme = "dark");

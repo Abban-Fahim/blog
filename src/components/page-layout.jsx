@@ -21,7 +21,12 @@ export default function Layout(props) {
       </header>
       <section>{props.children}</section>
       <footer>
-        <h6>FOOTERSSSSSSSS</h6>
+        <h3 style={{ flex: 1, minWidth: "200px" }}>
+          Check out the blog on
+          <a href="https://github.com/abban-fahim/blog"> Github</a>
+        </h3>
+        <h3>Subscribe to my bi-weekly newsletter</h3>
+        <input type="email" placeholder="email" />
       </footer>
     </main>
   );
