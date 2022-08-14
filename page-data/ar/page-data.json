@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-ar-jsx","path":"/ar/","result":{"data":{"allMdx":{"edges":[{"node":{"slug":"about.ar","frontmatter":{"title":"عن البلوجي","date":"10 July 2022","desc":"أهلا وسهلا للمدونتي"}}}]}},"pageContext":{"slug":"/ar/","langKey":"ar"}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-ar-index-jsx","path":"/ar/","result":{"data":{"allMdx":{"edges":[{"node":{"slug":"ar/about","frontmatter":{"title":"عن البلوجي","date":"10 July 2022","desc":"أهلا وسهلا للمدونتي"}}}]}},"pageContext":{}},"staticQueryHashes":[]}
