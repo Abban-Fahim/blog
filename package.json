@@ -1,0 +1,21 @@
+{
+    "name": "blog",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev --port=8000 --host",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/svelte": "^2.0.1",
+        "astro": "^2.0.10",
+        "nanostores": "^0.7.3",
+        "svelte": "^3.55.1"
+    },
+    "devDependencies": {
+        "sass": "^1.58.0"
+    }
+}

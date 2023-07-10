@@ -1,0 +1,37 @@
+---
+// This file only renders the queried routes from Astro's API
+// See index.svelte for homepage source code
+
+import { getCollection } from "astro:content";
+import Index from "./index.svelte";
+
+let { lang } = Astro.props;
+console.log(lang, "kkk");
+
+if (!lang) {
+    lang = "en";
+}
+const allPosts = await getCollection(lang);
+---
+
+<html {lang} dir={lang == "ur" ? "rtl" : "ltr"}>
+    <meta charset="utf-8" />
+    <title>My blog</title>
+
+    <Index lang={lang} client:idle>
+        <div id="posts">
+            {
+                allPosts.map((post) => {
+                    return (
+                        <a
+                            class="post-link"
+                            href={"/" + lang + "/" + post.slug}
+                        >
+                            {post.data.title}
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </Index>
+</html>

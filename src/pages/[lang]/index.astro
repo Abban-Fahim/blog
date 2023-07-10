@@ -1,0 +1,16 @@
+---
+import Homepage from "../index.astro";
+import { Debug } from "astro/components";
+
+export function getStaticPaths() {
+    return [
+        { params: { lang: "en" }, props: { lang: "en" } },
+        { params: { lang: "ur" }, props: { lang: "ur" } },
+    ];
+}
+
+const { lang } = Astro.props;
+console.log(lang);
+---
+
+<Homepage lang={lang} />

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn&family=Trispace&display=swap");
+@import "prism.scss";
+
+:root {
+  --base00: #2e2a31;
+  --base01: #4a464d;
+  --base02: #666369;
+  --base03: #838085;
+  --base04: #9f9da2;
+  --base05: #bcbabe;
+  --base06: #d8d7da;
+  --base07: #f5f4f7;
+  --base08: #d8137f;
+  --base09: #d65407;
+  --base0A: #dc8a0e;
+  --base0B: #17ad98;
+  --base0C: #149bda;
+  --base0D: #796af5;
+  --base0E: #bb60ea;
+  --base0F: #c720ca;
+}
+$border: 4px dashed var(--base0D);
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: .2s ease-in;
+  font-family: Trispace, Vazirmatn, sans-serif;
+}
+
+// Generic styles
+p {
+  font-size: calc(15px + 0.390625vw);
+  margin-bottom: 28px;
+  letter-spacing: 0.05em;
+  line-height: 30px;
+  [dir="rtl"] > & {
+    font-size: calc(17px + 0.345625vw);
+  }
+}
+a{
+    color: var(--base0C);
+}
+// Generic styles
+
+// Layour definitions
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--base00);
+    color: var(--base07);
+    padding: 16px 0;
+}
+header{
+    width: 100%;
+    grid-area: header;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    color: var(--base0A);
+    border-bottom: $border;
+    a{
+        padding: 0 12px;
+        font-size: calc(50px - 0.2vw);
+    }
+}
+#sidebar{
+    width: 25%;
+}
+#sidebarToggle{
+    display: none;
+    position: absolute;
+    top: 18px;
+    right: -18px;
+}
+article {
+  border-inline-start: $border;
+  padding: calc(4.8vw - 12px);
+  flex: 1;
+  min-height: 70vh;
+}
+main{
+    width: 100vw;
+}
+#posts{
+    display: flex;
+    flex-direction: column;
+}
+// Sections of an article
+
+// Util classes
+.huge {
+    font-weight: bold;
+}
+h1.huge {
+  font-size: calc(68px + 3.6vw);
+}
+h2.huge {
+  font-size: calc(40px + 2.4vw);
+}
+.btn {
+  padding: 14px;
+}
+.post-link {
+    padding: 28px 24px;
+    font-size: calc(30px + 0.2vw);
+    text-decoration: none;
+    background: var(--base01);
+    &:hover{
+        background: var(--base02);
+    }
+}
+// Util classes
+
+
+
+@media (max-width: 786px) {
+    #sidebar {
+        background: var(--base02);
+        position: absolute;
+        opacity: 60;
+        width: 100vw;
+        height: 100vh;
+        height: 100;
+        right: 100vw;
+    }
+    #sidebar.visible{
+        right: 0;
+        #sidebarToggle{
+            right: 18px;
+        }
+    }
+    #sidebarToggle{
+        display: block;
+    }
+}

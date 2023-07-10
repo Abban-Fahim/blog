@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Template from "../template.svelte";
+
+export async function getStaticPaths() {
+    const englishEntries = await getCollection("en");
+    const urduEntries = await getCollection("ur");
+
+    let entries = englishEntries.map((entry) => {
+        return {
+            params: { lang: "en", slug: entry.slug },
+            props: { entry, lang: "en" },
+        };
+    });
+
+    urduEntries.map((entry) => {
+        entries.push({
+            params: { lang: "ur", slug: entry.slug },
+            props: { entry, lang: "ur" },
+        });
+    });
+
+    return entries;
+}
+const { entry, lang } = Astro.props;
+console.log(lang);
+const { Content, headings } = await entry.render();
+---
+
+<html lang dir={lang == "ur" ? "rtl" : "ltr"}>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <Template metadata={{ entry, headings, lang }} client:only>
+            <Content />
+        </Template>
+    </body>
+</html>
+
